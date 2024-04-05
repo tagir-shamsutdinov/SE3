@@ -1,0 +1,15 @@
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/bin/Debug/net7.0/SE2_Server
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/bin/Debug/net7.0/SE2_Server.deps.json
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/bin/Debug/net7.0/SE2_Server.runtimeconfig.json
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/bin/Debug/net7.0/SE2_Server.dll
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/bin/Debug/net7.0/SE2_Server.pdb
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/SE2_Server.csproj.AssemblyReference.cache
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/SE2_Server.GeneratedMSBuildEditorConfig.editorconfig
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/SE2_Server.AssemblyInfoInputs.cache
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/SE2_Server.AssemblyInfo.cs
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/SE2_Server.csproj.CoreCompileInputs.cache
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/SE2_Server.dll
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/refint/SE2_Server.dll
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/SE2_Server.pdb
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/SE2_Server.genruntimeconfig.cache
+/Users/a1/RiderProjects/SE2_Server/SE2_Server/obj/Debug/net7.0/ref/SE2_Server.dll
