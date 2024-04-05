@@ -1,0 +1,15 @@
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/bin/Debug/net7.0/SE3_Client
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/bin/Debug/net7.0/SE3_Client.deps.json
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/bin/Debug/net7.0/SE3_Client.runtimeconfig.json
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/bin/Debug/net7.0/SE3_Client.dll
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/bin/Debug/net7.0/SE3_Client.pdb
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/SE3_Client.csproj.AssemblyReference.cache
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/SE3_Client.GeneratedMSBuildEditorConfig.editorconfig
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/SE3_Client.AssemblyInfoInputs.cache
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/SE3_Client.AssemblyInfo.cs
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/SE3_Client.csproj.CoreCompileInputs.cache
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/SE3_Client.dll
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/refint/SE3_Client.dll
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/SE3_Client.pdb
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/SE3_Client.genruntimeconfig.cache
+/Users/a1/RiderProjects/SE3_Client/SE3_Client/obj/Debug/net7.0/ref/SE3_Client.dll

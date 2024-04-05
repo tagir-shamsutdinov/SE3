@@ -1,0 +1,15 @@
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/bin/Debug/net7.0/SE3_Server
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/bin/Debug/net7.0/SE3_Server.deps.json
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/bin/Debug/net7.0/SE3_Server.runtimeconfig.json
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/bin/Debug/net7.0/SE3_Server.dll
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/bin/Debug/net7.0/SE3_Server.pdb
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/SE3_Server.csproj.AssemblyReference.cache
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/SE3_Server.GeneratedMSBuildEditorConfig.editorconfig
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/SE3_Server.AssemblyInfoInputs.cache
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/SE3_Server.AssemblyInfo.cs
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/SE3_Server.csproj.CoreCompileInputs.cache
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/SE3_Server.dll
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/refint/SE3_Server.dll
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/SE3_Server.pdb
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/SE3_Server.genruntimeconfig.cache
+/Users/a1/RiderProjects/SE3_Server/SE3_Server/obj/Debug/net7.0/ref/SE3_Server.dll

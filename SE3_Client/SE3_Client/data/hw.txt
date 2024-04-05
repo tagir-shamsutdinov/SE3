@@ -1,0 +1,752 @@
+a1@MacBook-Pro-1 ~ % cd SE_hw01_09252_Shamsutdinov
+cd: not a directory: SE_hw01_09252_Shamsutdinov
+a1@MacBook-Pro-1 ~ % open SE_hw01_09252_Shamsutdinov
+a1@MacBook-Pro-1 ~ % ls
+AndroidStudioProjects        Parallels
+Applications            Pictures
+Applications (Parallels)    Projects
+Desktop                Public
+Documents            PycharmProjects
+Downloads            SE_hw01_09252_Shamsutdinov
+IdeaProjects            SE_lab01_09252_Shamsutdinov
+Library                matlab_crash_dump.23083-1
+Movies                school21
+Music
+a1@MacBook-Pro-1 ~ % rm SE_hw01_09252_Shamsutdinov
+a1@MacBook-Pro-1 ~ % ls
+AndroidStudioProjects        Music
+Applications            Parallels
+Applications (Parallels)    Pictures
+Desktop                Projects
+Documents            Public
+Downloads            PycharmProjects
+IdeaProjects            SE_lab01_09252_Shamsutdinov
+Library                matlab_crash_dump.23083-1
+Movies                school21
+a1@MacBook-Pro-1 ~ % mkdir SE_hw01_09252_Shamsutdinov
+a1@MacBook-Pro-1 ~ % cd SE_hw01_09252_Shamsutdinov
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % git clone https://github.com/smartiqaorg/geometric_lib.git
+Cloning into 'geometric_lib'...
+remote: Enumerating objects: 35, done.
+remote: Total 35 (delta 0), reused 0 (delta 0), pack-reused 35
+Receiving objects: 100% (35/35), 4.60 KiB | 1.53 MiB/s, done.
+Resolving deltas: 100% (6/6), done.
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % ls
+geometric_lib
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % cd geometric_lib 
+a1@MacBook-Pro-1 geometric_lib % ls
+circle.py    docs        square.py
+a1@MacBook-Pro-1 geometric_lib % git checkout -b new_features
+Switched to a new branch 'new_features'
+a1@MacBook-Pro-1 geometric_lib % git branch
+  main
+* new_features
+a1@MacBook-Pro-1 geometric_lib % touch rectangle.py
+a1@MacBook-Pro-1 geometric_lib % nano rectangle.py 
+a1@MacBook-Pro-1 geometric_lib % git commit -m "L-03: Added rectangle.py"
+On branch new_features
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+    rectangle.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+a1@MacBook-Pro-1 geometric_lib % git add .
+a1@MacBook-Pro-1 geometric_lib % git commit -m "L-03: Added rectangle.py"
+[new_features 325d3b4] L-03: Added rectangle.py
+ 1 file changed, 5 insertions(+)
+ create mode 100644 rectangle.py
+a1@MacBook-Pro-1 geometric_lib % touch triangle.py
+a1@MacBook-Pro-1 geometric_lib % nano triangle.py 
+a1@MacBook-Pro-1 geometric_lib % nano rectangle.py 
+a1@MacBook-Pro-1 geometric_lib % git status
+On branch new_features
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+    modified:   rectangle.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+    triangle.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+a1@MacBook-Pro-1 geometric_lib % git add .
+a1@MacBook-Pro-1 geometric_lib % git commit -m "L-03: Added triangle.py and fixed rectangle perimeter bug"
+[new_features 674a2a8] L-03: Added triangle.py and fixed rectangle perimeter bug
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+ create mode 100644 triangle.py
+a1@MacBook-Pro-1 geometric_lib % git log --all --graph
+* commit 674a2a8a16e46eacdedf7a5b693f4296b037bf81 (HEAD -> new_features)
+| Author: tagir-shamsutdinov <tagir_main@mail.ru>
+| Date:   Fri Mar 1 01:03:13 2024 +0300
+| 
+|     L-03: Added triangle.py and fixed rectangle perimeter bug
+| 
+* commit 325d3b4b59fa3e05e97d406168cf94019863a068
+| Author: tagir-shamsutdinov <tagir_main@mail.ru>
+| Date:   Fri Mar 1 01:00:59 2024 +0300
+| 
+|     L-03: Added rectangle.py
+|   
+| * commit 86edb1c3dd57fa9abc7ba2ec7052507938084727 (origin/release)
+| | Author: Danny <bublikplushka@yandex.ru>
+| | Date:   Mon Apr 19 15:15:14 2021 +0300
+| | 
+| |     L-05: Update Docs. Add user agreement info
+| | 
+| * commit 438b89a1dfc58d90e9036fe431771427965cd1ff
+| | Author: Danny <bublikplushka@yandex.ru>
+| | Date:   Mon Apr 19 15:12:19 2021 +0300
+| | 
+| |     L-05: Add user agreement
+| | 
+| * commit 6adb96248a4d00d3bea13bd95d78ef52352cd1b4
+| | Author: smartiqa <info@smartiqa.ru>
+| | Date:   Thu Mar 4 14:55:29 2021 +0300
+| | 
+| |     L-03: Docs added
+| |   
+| | * commit 30494317cde4419be779c14306561e0eaa78b88b (origin/feature)
+| |/  Author: Daniil.K <dlkay@yandex.ru>
+|/|   Date:   Tue Mar 30 17:36:09 2021 +0300
+| |   
+| |       L-04: Add rectangle.py
+| |   
+| | * commit b5b0fae727ca72c317c383b39c0af73d6adcd81c (origin/develop)
+| | | Author: Daniil.K <dlkay@yandex.ru>
+| | | Date:   Tue Mar 30 18:02:23 2021 +0300
+| | | 
+| | |     L-04: Update docs for calculate.py
+| | | 
+| | * commit d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71
+| | | Author: Daniil.K <dlkay@yandex.ru>
+| | | Date:   Tue Mar 30 17:57:42 2021 +0300
+| | | 
+| | |     L-04: Add calculate.py
+| | | 
+| | * commit 51c40ebfd0e0b65f52fe5e54740cbb038e492db3
+| | | Author: smartiqa <info@smartiqa.ru>
+| | | Date:   Fri Mar 26 14:52:26 2021 +0300
+| | | 
+| | |     L-04: Doc updated for triangle
+| | | 
+| | * commit d080c7888b81955bad2ed78d58ad910526b5132a
+| |/  Author: smartiqa <info@smartiqa.ru>
+|/|   Date:   Fri Mar 26 14:48:39 2021 +0300
+| |   
+| |       L-04: Triangle added
+| | 
+* | commit d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD, main)
+|/  Author: smartiqa <info@smartiqa.ru>
+|   Date:   Thu Mar 4 14:55:29 2021 +0300
+|   
+|       L-03: Docs added
+| 
+a1@MacBook-Pro-1 geometric_lib % git log --oneline -n 2
+674a2a8 (HEAD -> new_features) L-03: Added triangle.py and fixed rectangle perimeter bug
+325d3b4 L-03: Added rectangle.py
+a1@MacBook-Pro-1 geometric_lib % git log -2 --pretty=oneline
+674a2a8a16e46eacdedf7a5b693f4296b037bf81 (HEAD -> new_features) L-03: Added triangle.py and fixed rectangle perimeter bug
+325d3b4b59fa3e05e97d406168cf94019863a068 L-03: Added rectangle.py
+a1@MacBook-Pro-1 geometric_lib % git diff 674a2 325d3
+diff --git a/rectangle.py b/rectangle.py
+index 6f3e1a3..eb68866 100644
+--- a/rectangle.py
++++ b/rectangle.py
+@@ -2,5 +2,4 @@ def area(a, b):
+     return a * b 
+ 
+ def perimeter(a, b): 
+-    return 2 * (a + b)
+-
++    return a + b 
+diff --git a/triangle.py b/triangle.py
+deleted file mode 100644
+index 64c153d..0000000
+--- a/triangle.py
++++ /dev/null
+@@ -1,5 +0,0 @@
+-def area(a, h): 
+-    return a * h / 2 
+-
+-def perimeter(a, b, c): 
+-    return a + b + c 
+a1@MacBook-Pro-1 geometric_lib % git branch -D new_features
+error: Cannot delete branch 'new_features' checked out at '/Users/a1/SE_hw01_09252_Shamsutdinov/geometric_lib'
+a1@MacBook-Pro-1 geometric_lib % git branch
+  main
+* new_features
+a1@MacBook-Pro-1 geometric_lib % git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+a1@MacBook-Pro-1 geometric_lib % git branch -D new_features
+Deleted branch new_features (was 674a2a8).
+a1@MacBook-Pro-1 geometric_lib % git branch
+* main
+a1@MacBook-Pro-1 geometric_lib % cd ..                                 
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % ls
+geometric_lib
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % git clone https://github.com/smartiqaorg/geometric_lib.git
+fatal: destination path 'geometric_lib' already exists and is not an empty directory.
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % rm -rf geometric_lib 
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % ls
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % git clone https://github.com/smartiqaorg/geometric_lib.git
+Cloning into 'geometric_lib'...
+remote: Enumerating objects: 35, done.
+remote: Total 35 (delta 0), reused 0 (delta 0), pack-reused 35
+Receiving objects: 100% (35/35), 4.60 KiB | 4.60 MiB/s, done.
+Resolving deltas: 100% (6/6), done.
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % cd geometric_lib 
+a1@MacBook-Pro-1 geometric_lib % ls
+circle.py    docs        square.py
+a1@MacBook-Pro-1 geometric_lib % tree
+zsh: command not found: tree
+a1@MacBook-Pro-1 geometric_lib % TREE
+zsh: command not found: TREE
+a1@MacBook-Pro-1 geometric_lib % git branch -all
+error: did you mean `--all` (with two dashes)?
+a1@MacBook-Pro-1 geometric_lib % git branch --all
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/develop
+  remotes/origin/feature
+  remotes/origin/main
+  remotes/origin/release
+a1@MacBook-Pro-1 geometric_lib % git checkout develop
+branch 'develop' set up to track 'origin/develop'.
+Switched to a new branch 'develop'
+a1@MacBook-Pro-1 geometric_lib % git checkout feature
+branch 'feature' set up to track 'origin/feature'.
+Switched to a new branch 'feature'
+a1@MacBook-Pro-1 geometric_lib % git branch --all    
+  develop
+* feature
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/develop
+  remotes/origin/feature
+  remotes/origin/main
+  remotes/origin/release
+a1@MacBook-Pro-1 geometric_lib % git log
+commit 30494317cde4419be779c14306561e0eaa78b88b (HEAD -> feature, origin/feature)
+Author: Daniil.K <dlkay@yandex.ru>
+Date:   Tue Mar 30 17:36:09 2021 +0300
+
+    L-04: Add rectangle.py
+
+commit d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD, main)
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:55:29 2021 +0300
+
+    L-03: Docs added
+
+commit 8ba9aeb3cea847b63a91ac378a2a6db758682460
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:54:08 2021 +0300
+
+    L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git revert HEAD
+[feature 302f198] Revert "L-04: Add rectangle.py"
+ 1 file changed, 7 deletions(-)
+ delete mode 100644 rectangle.py
+a1@MacBook-Pro-1 geometric_lib % git log        
+commit 302f19872edb1a4d4c2954c6b2ed149ebaa367e7 (HEAD -> feature)
+Author: tagir-shamsutdinov <tagir_main@mail.ru>
+Date:   Fri Mar 1 01:42:07 2024 +0300
+
+    Revert "L-04: Add rectangle.py"
+    
+    This reverts commit 30494317cde4419be779c14306561e0eaa78b88b.
+
+commit 30494317cde4419be779c14306561e0eaa78b88b (origin/feature)
+Author: Daniil.K <dlkay@yandex.ru>
+Date:   Tue Mar 30 17:36:09 2021 +0300
+
+    L-04: Add rectangle.py
+
+commit d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD, main)
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:55:29 2021 +0300
+
+    L-03: Docs added
+
+commit 8ba9aeb3cea847b63a91ac378a2a6db758682460
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:54:08 2021 +0300
+
+    L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git revert HEAD
+[feature 91151b2] Revert "Revert "L-04: Add rectangle.py""
+ 1 file changed, 7 insertions(+)
+ create mode 100644 rectangle.py
+a1@MacBook-Pro-1 geometric_lib % git log
+commit 91151b26ca21e33e56c79d44cf9ff8177a3cbe50 (HEAD -> feature)
+Author: tagir-shamsutdinov <tagir_main@mail.ru>
+Date:   Fri Mar 1 01:43:16 2024 +0300
+
+    Revert "Revert "L-04: Add rectangle.py""
+    
+    This reverts commit 302f19872edb1a4d4c2954c6b2ed149ebaa367e7.
+
+commit 302f19872edb1a4d4c2954c6b2ed149ebaa367e7
+Author: tagir-shamsutdinov <tagir_main@mail.ru>
+Date:   Fri Mar 1 01:42:07 2024 +0300
+
+    Revert "L-04: Add rectangle.py"
+    
+    This reverts commit 30494317cde4419be779c14306561e0eaa78b88b.
+
+commit 30494317cde4419be779c14306561e0eaa78b88b (origin/feature)
+Author: Daniil.K <dlkay@yandex.ru>
+Date:   Tue Mar 30 17:36:09 2021 +0300
+
+    L-04: Add rectangle.py
+
+commit d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD, main)
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:55:29 2021 +0300
+
+    L-03: Docs added
+
+commit 8ba9aeb3cea847b63a91ac378a2a6db758682460
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:54:08 2021 +0300
+
+    L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git checkout develop
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+a1@MacBook-Pro-1 geometric_lib % git log
+commit b5b0fae727ca72c317c383b39c0af73d6adcd81c (HEAD -> develop, origin/develop)
+Author: Daniil.K <dlkay@yandex.ru>
+Date:   Tue Mar 30 18:02:23 2021 +0300
+
+    L-04: Update docs for calculate.py
+
+commit d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71
+Author: Daniil.K <dlkay@yandex.ru>
+Date:   Tue Mar 30 17:57:42 2021 +0300
+
+    L-04: Add calculate.py
+
+commit 51c40ebfd0e0b65f52fe5e54740cbb038e492db3
+Author: smartiqa <info@smartiqa.ru>
+Date:   Fri Mar 26 14:52:26 2021 +0300
+
+    L-04: Doc updated for triangle
+
+commit d080c7888b81955bad2ed78d58ad910526b5132a
+Author: smartiqa <info@smartiqa.ru>
+Date:   Fri Mar 26 14:48:39 2021 +0300
+
+    L-04: Triangle added
+
+commit d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD, main)
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:55:29 2021 +0300
+
+    L-03: Docs added
+
+commit 8ba9aeb3cea847b63a91ac378a2a6db758682460
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:54:08 2021 +0300
+
+    L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git reset --soft HEAD-2
+fatal: ambiguous argument 'HEAD-2': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+a1@MacBook-Pro-1 geometric_lib % git reset --soft HEAD~2
+a1@MacBook-Pro-1 geometric_lib % git log
+commit 51c40ebfd0e0b65f52fe5e54740cbb038e492db3 (HEAD -> develop)
+Author: smartiqa <info@smartiqa.ru>
+Date:   Fri Mar 26 14:52:26 2021 +0300
+
+    L-04: Doc updated for triangle
+
+commit d080c7888b81955bad2ed78d58ad910526b5132a
+Author: smartiqa <info@smartiqa.ru>
+Date:   Fri Mar 26 14:48:39 2021 +0300
+
+    L-04: Triangle added
+
+commit d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD, main)
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:55:29 2021 +0300
+
+    L-03: Docs added
+
+commit 8ba9aeb3cea847b63a91ac378a2a6db758682460
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:54:08 2021 +0300
+
+    L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git status
+On branch develop
+Your branch is behind 'origin/develop' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+    new file:   calculate.py
+    modified:   docs/README.md
+
+a1@MacBook-Pro-1 geometric_lib % git commit -c ORIG_HEAD
+[develop a98fa52] L-04: Update docs for calculate.py
+ Author: Daniil.K <dlkay@yandex.ru>
+ Date: Tue Mar 30 18:02:23 2021 +0300
+ 2 files changed, 50 insertions(+), 8 deletions(-)
+ create mode 100644 calculate.py
+a1@MacBook-Pro-1 geometric_lib % git log
+commit a98fa52da519d424d96f18b34bec131dfe413bdb (HEAD -> develop)
+Author: Daniil.K <dlkay@yandex.ru>
+Date:   Tue Mar 30 18:02:23 2021 +0300
+
+    L-04: Update docs for calculate.py
+
+commit 51c40ebfd0e0b65f52fe5e54740cbb038e492db3
+Author: smartiqa <info@smartiqa.ru>
+Date:   Fri Mar 26 14:52:26 2021 +0300
+
+    L-04: Doc updated for triangle
+
+commit d080c7888b81955bad2ed78d58ad910526b5132a
+Author: smartiqa <info@smartiqa.ru>
+Date:   Fri Mar 26 14:48:39 2021 +0300
+
+    L-04: Triangle added
+
+commit d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD, main)
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:55:29 2021 +0300
+
+    L-03: Docs added
+
+commit 8ba9aeb3cea847b63a91ac378a2a6db758682460
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:54:08 2021 +0300
+
+    L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git status
+On branch develop
+Your branch and 'origin/develop' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+a1@MacBook-Pro-1 geometric_lib % git checkout -b develop
+fatal: a branch named 'develop' already exists
+a1@MacBook-Pro-1 geometric_lib % git checkout -b experiment
+Switched to a new branch 'experiment'
+a1@MacBook-Pro-1 geometric_lib % git restore --worktree docs/README.md --source develop
+a1@MacBook-Pro-1 geometric_lib % git status
+On branch experiment
+nothing to commit, working tree clean
+a1@MacBook-Pro-1 geometric_lib % git restore --worktree docs/README.md --source develop
+a1@MacBook-Pro-1 geometric_lib % git status                                            
+On branch experiment
+nothing to commit, working tree clean
+a1@MacBook-Pro-1 geometric_lib % git checkout develop
+Switched to branch 'develop'
+Your branch and 'origin/develop' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+a1@MacBook-Pro-1 geometric_lib % git log
+commit a98fa52da519d424d96f18b34bec131dfe413bdb (HEAD -> develop, experiment)
+Author: Daniil.K <dlkay@yandex.ru>
+Date:   Tue Mar 30 18:02:23 2021 +0300
+
+    L-04: Update docs for calculate.py
+
+commit 51c40ebfd0e0b65f52fe5e54740cbb038e492db3
+Author: smartiqa <info@smartiqa.ru>
+Date:   Fri Mar 26 14:52:26 2021 +0300
+
+    L-04: Doc updated for triangle
+
+commit d080c7888b81955bad2ed78d58ad910526b5132a
+Author: smartiqa <info@smartiqa.ru>
+Date:   Fri Mar 26 14:48:39 2021 +0300
+
+    L-04: Triangle added
+
+commit d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD, main)
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:55:29 2021 +0300
+
+    L-03: Docs added
+
+commit 8ba9aeb3cea847b63a91ac378a2a6db758682460
+Author: smartiqa <info@smartiqa.ru>
+Date:   Thu Mar 4 14:54:08 2021 +0300
+
+    L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git checkout experiment
+Switched to branch 'experiment'
+a1@MacBook-Pro-1 geometric_lib % git status
+On branch experiment
+nothing to commit, working tree clean
+a1@MacBook-Pro-1 geometric_lib % git restore --worktree --staged calculate.py --source develop
+a1@MacBook-Pro-1 geometric_lib % git status
+On branch experiment
+nothing to commit, working tree clean
+a1@MacBook-Pro-1 geometric_lib % git add docs/README.md
+a1@MacBook-Pro-1 geometric_lib % git commit -m "L-04: Experimental commit"
+On branch experiment
+nothing to commit, working tree clean
+a1@MacBook-Pro-1 geometric_lib % git rm circle.py square.py 
+rm 'circle.py'
+rm 'square.py'
+a1@MacBook-Pro-1 geometric_lib % git status
+On branch experiment
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+    deleted:    circle.py
+    deleted:    square.py
+
+a1@MacBook-Pro-1 geometric_lib % git commit -m "L-04: Deleted circle and square"
+[experiment 7fca9fd] L-04: Deleted circle and square
+ 2 files changed, 17 deletions(-)
+ delete mode 100644 circle.py
+ delete mode 100644 square.py
+a1@MacBook-Pro-1 geometric_lib % cd ..                                          
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % rm -rf geometric_lib 
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % git clone https://github.com/smartiqaorg/geometric_lib.git
+Cloning into 'geometric_lib'...
+remote: Enumerating objects: 35, done.
+remote: Total 35 (delta 0), reused 0 (delta 0), pack-reused 35
+Receiving objects: 100% (35/35), 4.60 KiB | 4.60 MiB/s, done.
+Resolving deltas: 100% (6/6), done.
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % git branch --all
+fatal: not a git repository (or any of the parent directories): .git
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % git checkout --all
+fatal: not a git repository (or any of the parent directories): .git
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % cd geometric_lib 
+a1@MacBook-Pro-1 geometric_lib % git checkout develop
+branch 'develop' set up to track 'origin/develop'.
+Switched to a new branch 'develop'
+a1@MacBook-Pro-1 geometric_lib % git checkout feature
+branch 'feature' set up to track 'origin/feature'.
+Switched to a new branch 'feature'
+a1@MacBook-Pro-1 geometric_lib % git log --all --pretty=oneline --graph
+* 86edb1c3dd57fa9abc7ba2ec7052507938084727 (origin/release) L-05: Update Docs. Add user agreement info
+* 438b89a1dfc58d90e9036fe431771427965cd1ff L-05: Add user agreement
+* 6adb96248a4d00d3bea13bd95d78ef52352cd1b4 L-03: Docs added
+| * 30494317cde4419be779c14306561e0eaa78b88b (HEAD -> feature, origin/feature) L-04: Add rectangle.py
+| | * b5b0fae727ca72c317c383b39c0af73d6adcd81c (origin/develop, develop) L-04: Update docs for calculate.py
+| | * d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71 L-04: Add calculate.py
+| | * 51c40ebfd0e0b65f52fe5e54740cbb038e492db3 L-04: Doc updated for triangle
+| | * d080c7888b81955bad2ed78d58ad910526b5132a L-04: Triangle added
+| |/  
+| * d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD, main) L-03: Docs added
+|/  
+* 8ba9aeb3cea847b63a91ac378a2a6db758682460 L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+a1@MacBook-Pro-1 geometric_lib % git merge develop --no-ff
+Merge made by the 'ort' strategy.
+ calculate.py   | 33 +++++++++++++++++++++++++++++++++
+ docs/README.md | 23 +++++++++++++++++------
+ triangle.py    |  6 ++++++
+ 3 files changed, 56 insertions(+), 6 deletions(-)
+ create mode 100644 calculate.py
+ create mode 100644 triangle.py
+a1@MacBook-Pro-1 geometric_lib % git log --all --pretty=oneline --graph
+*   89fd11bccc7b5905f3a52beb8aad3fb20e6050fa (HEAD -> main) Merge branch 'develop'
+|\  
+| * b5b0fae727ca72c317c383b39c0af73d6adcd81c (origin/develop, develop) L-04: Update docs for calculate.py
+| * d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71 L-04: Add calculate.py
+| * 51c40ebfd0e0b65f52fe5e54740cbb038e492db3 L-04: Doc updated for triangle
+| * d080c7888b81955bad2ed78d58ad910526b5132a L-04: Triangle added
+|/  
+| * 86edb1c3dd57fa9abc7ba2ec7052507938084727 (origin/release) L-05: Update Docs. Add user agreement info
+| * 438b89a1dfc58d90e9036fe431771427965cd1ff L-05: Add user agreement
+| * 6adb96248a4d00d3bea13bd95d78ef52352cd1b4 L-03: Docs added
+| | * 30494317cde4419be779c14306561e0eaa78b88b (origin/feature, feature) L-04: Add rectangle.py
+| |/  
+|/|   
+* | d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD) L-03: Docs added
+|/  
+* 8ba9aeb3cea847b63a91ac378a2a6db758682460 L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git reset --hard HEAD^
+HEAD is now at d078c8d L-03: Docs added
+a1@MacBook-Pro-1 geometric_lib % git log --all --pretty=oneline --graph
+* 86edb1c3dd57fa9abc7ba2ec7052507938084727 (origin/release) L-05: Update Docs. Add user agreement info
+* 438b89a1dfc58d90e9036fe431771427965cd1ff L-05: Add user agreement
+* 6adb96248a4d00d3bea13bd95d78ef52352cd1b4 L-03: Docs added
+| * 30494317cde4419be779c14306561e0eaa78b88b (origin/feature, feature) L-04: Add rectangle.py
+| | * b5b0fae727ca72c317c383b39c0af73d6adcd81c (origin/develop, develop) L-04: Update docs for calculate.py
+| | * d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71 L-04: Add calculate.py
+| | * 51c40ebfd0e0b65f52fe5e54740cbb038e492db3 L-04: Doc updated for triangle
+| | * d080c7888b81955bad2ed78d58ad910526b5132a L-04: Triangle added
+| |/  
+| * d078c8d9ee6155f3cb0e577d28d337b791de28e2 (HEAD -> main, origin/main, origin/HEAD) L-03: Docs added
+|/  
+* 8ba9aeb3cea847b63a91ac378a2a6db758682460 L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git merge develop --ff
+Updating d078c8d..b5b0fae
+Fast-forward
+ calculate.py   | 33 +++++++++++++++++++++++++++++++++
+ docs/README.md | 23 +++++++++++++++++------
+ triangle.py    |  6 ++++++
+ 3 files changed, 56 insertions(+), 6 deletions(-)
+ create mode 100644 calculate.py
+ create mode 100644 triangle.py
+a1@MacBook-Pro-1 geometric_lib % git log --all --pretty=oneline --graph
+* 86edb1c3dd57fa9abc7ba2ec7052507938084727 (origin/release) L-05: Update Docs. Add user agreement info
+* 438b89a1dfc58d90e9036fe431771427965cd1ff L-05: Add user agreement
+* 6adb96248a4d00d3bea13bd95d78ef52352cd1b4 L-03: Docs added
+| * 30494317cde4419be779c14306561e0eaa78b88b (origin/feature, feature) L-04: Add rectangle.py
+| | * b5b0fae727ca72c317c383b39c0af73d6adcd81c (HEAD -> main, origin/develop, develop) L-04: Update docs for calculate.py
+| | * d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71 L-04: Add calculate.py
+| | * 51c40ebfd0e0b65f52fe5e54740cbb038e492db3 L-04: Doc updated for triangle
+| | * d080c7888b81955bad2ed78d58ad910526b5132a L-04: Triangle added
+| |/  
+| * d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD) L-03: Docs added
+|/  
+* 8ba9aeb3cea847b63a91ac378a2a6db758682460 L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git config merge.conflictstyle diff3
+a1@MacBook-Pro-1 geometric_lib % git config --global merge.tool meld
+a1@MacBook-Pro-1 geometric_lib % git checkout release
+branch 'release' set up to track 'origin/release'.
+Switched to a new branch 'release'
+a1@MacBook-Pro-1 geometric_lib % git rebase -i main
+warning: skipped previously applied commit 6adb962
+hint: use --reapply-cherry-picks to include skipped commits
+hint: Disable this message with "git config advice.skippedCherryPicks false"
+Auto-merging docs/README.md
+CONFLICT (content): Merge conflict in docs/README.md
+error: could not apply 438b89a... L-05: Add user agreement
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 438b89a... L-05: Add user agreement
+a1@MacBook-Pro-1 geometric_lib % git mergetool
+Merging:
+docs/README.md
+
+Normal merge conflict for 'docs/README.md':
+  {local}: modified file
+  {remote}: modified file
+The merge tool meld is not available as 'meld'
+a1@MacBook-Pro-1 geometric_lib % git rebase --continue
+docs/README.md: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+a1@MacBook-Pro-1 geometric_lib % git mergetool        
+Merging:
+docs/README.md
+
+Normal merge conflict for 'docs/README.md':
+  {local}: modified file
+  {remote}: modified file
+The merge tool meld is not available as 'meld'
+a1@MacBook-Pro-1 geometric_lib % git rebase --continue
+docs/README.md: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+a1@MacBook-Pro-1 geometric_lib % git mergetool        
+Merging:
+docs/README.md
+
+Normal merge conflict for 'docs/README.md':
+  {local}: modified file
+  {remote}: modified file
+The merge tool meld is not available as 'meld'
+a1@MacBook-Pro-1 geometric_lib % git log --all --pretty=oneline --graph
+* 86edb1c3dd57fa9abc7ba2ec7052507938084727 (origin/release, release) L-05: Update Docs. Add user agreement info
+* 438b89a1dfc58d90e9036fe431771427965cd1ff L-05: Add user agreement
+* 6adb96248a4d00d3bea13bd95d78ef52352cd1b4 L-03: Docs added
+| * 30494317cde4419be779c14306561e0eaa78b88b (origin/feature, feature) L-04: Add rectangle.py
+| | * b5b0fae727ca72c317c383b39c0af73d6adcd81c (HEAD, origin/develop, main, develop) L-04: Update docs for calculate.py
+| | * d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71 L-04: Add calculate.py
+| | * 51c40ebfd0e0b65f52fe5e54740cbb038e492db3 L-04: Doc updated for triangle
+| | * d080c7888b81955bad2ed78d58ad910526b5132a L-04: Triangle added
+| |/  
+| * d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD) L-03: Docs added
+|/  
+* 8ba9aeb3cea847b63a91ac378a2a6db758682460 L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % git checkout main
+docs/README.md: needs merge
+error: you need to resolve your current index first
+a1@MacBook-Pro-1 geometric_lib % git mergetool
+Merging:
+docs/README.md
+
+Normal merge conflict for 'docs/README.md':
+  {local}: modified file
+  {remote}: modified file
+The merge tool meld is not available as 'meld'
+a1@MacBook-Pro-1 geometric_lib % git rebase --continue
+docs/README.md: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+a1@MacBook-Pro-1 geometric_lib % git checkout main
+docs/README.md: needs merge
+error: you need to resolve your current index first
+a1@MacBook-Pro-1 geometric_lib % git rebase -i main
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+    git rebase (--continue | --abort | --skip)
+If that is not the case, please
+    rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+a1@MacBook-Pro-1 geometric_lib % git mergetool
+Merging:
+docs/README.md
+
+Normal merge conflict for 'docs/README.md':
+  {local}: modified file
+  {remote}: modified file
+The merge tool meld is not available as 'meld'
+a1@MacBook-Pro-1 geometric_lib % git checkout main
+docs/README.md: needs merge
+error: you need to resolve your current index first
+a1@MacBook-Pro-1 geometric_lib % git merge release --ff
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+a1@MacBook-Pro-1 geometric_lib % git log --pretty=oneline --graph
+* b5b0fae727ca72c317c383b39c0af73d6adcd81c (HEAD, origin/develop, main, develop) L-04: Update docs for calculate.py
+* d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71 L-04: Add calculate.py
+* 51c40ebfd0e0b65f52fe5e54740cbb038e492db3 L-04: Doc updated for triangle
+* d080c7888b81955bad2ed78d58ad910526b5132a L-04: Triangle added
+* d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/main, origin/HEAD) L-03: Docs added
+* 8ba9aeb3cea847b63a91ac378a2a6db758682460 L-03: Circle and square added
+a1@MacBook-Pro-1 geometric_lib % cd ..
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % git clone https://github.com/tagir-shamsutdinov/test-repository.git
+Cloning into 'test-repository'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % ls 
+geometric_lib    test-repository
+a1@MacBook-Pro-1 SE_hw01_09252_Shamsutdinov % cd test-repository 
+a1@MacBook-Pro-1 test-repository % ls 
+README.md
+a1@MacBook-Pro-1 test-repository % open README.md 
+a1@MacBook-Pro-1 test-repository % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+    modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+a1@MacBook-Pro-1 test-repository % git add .
+a1@MacBook-Pro-1 test-repository % git commit -m "changed README"
+[main 3990e74] changed README
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+a1@MacBook-Pro-1 test-repository % git push
+Username for 'https://github.com': tagir-shamsutdinov
+Password for 'https://tagir-shamsutdinov@github.com': 
+fatal: unable to access 'https://github.com/tagir-shamsutdinov/test-repository.git/': Recv failure: No route to host
